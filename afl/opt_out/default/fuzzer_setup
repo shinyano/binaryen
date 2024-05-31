@@ -1,0 +1,8 @@
+# environment variables:
+AFL_CC=clang-14
+AFL_CUSTOM_INFO_PROGRAM=bin/wasm-opt
+AFL_CUSTOM_INFO_PROGRAM_ARGV=-O3 @@
+AFL_CUSTOM_INFO_OUT=afl/opt_out//default
+AFL_CXX=clang++-14
+# command line:
+'/home/usan/AFLplusplus/afl-fuzz' '-i' 'afl/opt_in_min/' '-o' 'afl/opt_out/' '-m' '200' '-d' '--' 'bin/wasm-opt' '-O3' '@@'

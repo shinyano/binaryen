@@ -1,0 +1,3 @@
+bin/wasm-opt
+-O3
+@@
